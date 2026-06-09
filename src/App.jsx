@@ -3,6 +3,7 @@ import HomePage from "./pages/Home";
 import { CourseProvider } from "./context/CourseContext";
 import CoursesPage from "./pages/CoursesPage";
 import CourseDetailPage from "./pages/CourseDetailPage";
+
 function App() {
     return (
         <CourseProvider>
