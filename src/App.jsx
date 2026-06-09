@@ -1,21 +1,22 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import HomePage from "./pages/Home";
 import { CourseProvider } from "./context/CourseContext";
-import Layout from "./components/Layout"
+import Layout from "./components/Layout";
+import CoursesPage from "./pages/CoursesPage";
 
-function App() {
+export default function App() {
   return (
     <CourseProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/courses" element={<div>cursos page</div>} />
-          <Route path="/courses/:id" element={<div>detalle de curso page</div>} />
-          <Route path="/enrollments" element={<div>inscripciones page</div>} />
+          <Route element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/courses" element={<CoursesPage />} />
+            <Route path="/courses/:id" element={<div>detalle de curso page</div>} />
+            <Route path="/enrollments" element={<div>inscripciones page</div>} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </CourseProvider>
   );
 }
-
-export default App;
