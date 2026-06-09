@@ -1,0 +1,61 @@
+.course-card{
+    display: flex;
+    flex-direction: column;
+    padding: 11px;
+    width: 300px;
+    min-height: 40px;
+    border: 3px black solid;
+    border-radius: 20px;
+    gap: 20px;
+    
+     
+
+     
+}
+
+
+.course-card span {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    
+}
+
+
+.course-card h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.course-card p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+}
+
+
+.ver-detalle {
+    background-color: rgb(56, 56, 56);
+    color: white;
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 9px;
+    border-radius: 15px;
+    transition: all ease 200ms;
+    text-align: center;
+    margin-top: auto;
+    
+
+
+}
+
+.ver-detalle:hover {
+    background-color: rgb(87, 86, 86);
+    transform: scale(1.03);
+
+    
+    
+
+
+}
+
+
