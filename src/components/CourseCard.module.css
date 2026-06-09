@@ -6,19 +6,12 @@
     min-height: 40px;
     border: 3px black solid;
     border-radius: 20px;
-    gap: 20px;
-    
-     
-
-     
+    gap: 20px;   
 }
 
-
 .course-card span {
-
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
-    
 }
 
 
@@ -43,18 +36,11 @@
     transition: all ease 200ms;
     text-align: center;
     margin-top: auto;
-    
-
-
 }
 
 .ver-detalle:hover {
     background-color: rgb(87, 86, 86);
     transform: scale(1.03);
-
-    
-    
-
 
 }
 

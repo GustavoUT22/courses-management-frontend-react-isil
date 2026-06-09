@@ -1,9 +1,6 @@
- 
-
 .courses-container {
     display: flex;
-    flex-direction: row;
-     
+    flex-direction: row;  
     gap: 50px 80px;
     flex-wrap: wrap;
 }
