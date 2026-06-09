@@ -1,10 +1,10 @@
 import { useState, useContext, createContext } from "react";
 
 export const CourseContext = createContext();
-export const useContext = useContext(CourseContext);
+//export const useContext = useContext(CourseContext);
 
 export const CourseProvider = ({children}) => {
-  const [enrollments, setEnrollments] = useContext(CourseContext);
+  const [enrollments, setEnrollments] = useState([]);
 
   const addEnrollment = (course) => {
     if (!enrollments.find(c => c.id == course.id)){
