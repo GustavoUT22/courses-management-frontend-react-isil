@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
-import { useCourse } from "../context/CourseContext";
+import { useEnrollment } from "../../context/EnrollmentContext";
 import styles from "./EnrollmentsPage.module.css";
 
 export default function EnrollmentsPage() {
-  const [enrollments, , removeEnrollment] = useCourse();
-
-  console.log("ENROLLMENTS:", enrollments);
+  const [enrollments, , removeEnrollment] = useEnrollment();
 
   return (
     <div className={styles.container}>

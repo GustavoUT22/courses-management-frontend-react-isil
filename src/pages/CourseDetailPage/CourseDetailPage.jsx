@@ -1,27 +1,22 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { courses } from "../data/courses";
-import { useCourse } from "../context/CourseContext";
+import { getCourseById } from "../../services/CourseService.jsx";
+import { useEnrollment } from "../../context/EnrollmentContext";
 import styles from "./CourseDetail.module.css";
 
 const CourseDetailPage = () => {
     const { id } = useParams();
     const [course, setCourse] = useState(null);
     const navigate = useNavigate();
-    const [enrollments, addEnrollment] = useCourse();
+    const [enrollments, addEnrollment] = useEnrollment();
 
     useEffect(() => {
-        const found = courses.find(
-            (c) => c.id === Number(id)
-        );
-        setCourse(found);
+        getCourseById(id).then(setCourse);
     }, [id]);
 
     if (!course) return <div>Cargando...</div>;
 
-    const isEnrolled = enrollments.some(
-        (c) => c.id === course.id
-    );
+    const isEnrolled = enrollments.some((c) => c.id === course.id);
 
     return (
         <div className={styles["course-container"]}>
@@ -32,31 +27,23 @@ const CourseDetailPage = () => {
                 >
                     Volver al catálogo
                 </button>
-
                 <h2>{course.name}</h2>
                 <p>{course.description}</p>
-
                 <p>
-                    <strong>Profesor:</strong>{" "}
-                    {course.teacher}
+                    <strong>Profesor:</strong> {course.teacher}
                 </p>
-
                 <p>
-                    <strong>Categoría:</strong>{" "}
-                    {course.category}
+                    <strong>Categoría:</strong> {course.category}
                 </p>
-
                 <p>
-                    <strong>Capacidad:</strong>{" "}
-                    {course.capacity}
+                    <strong>Capacidad:</strong> {course.capacity}
                 </p>
-
                 <button
-    onClick={() => addEnrollment(course)}
-    disabled={isEnrolled}
->
-    {isEnrolled ? "Ya inscrito" : "Preinscribirse"}
-</button>
+                    onClick={() => addEnrollment(course)}
+                    disabled={isEnrolled}
+                >
+                    {isEnrolled ? "Ya inscrito" : "Preinscribirse"}
+                </button>
             </div>
         </div>
     );

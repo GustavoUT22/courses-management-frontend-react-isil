@@ -1,14 +1,14 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import HomePage from "./pages/Home";
-import { CourseProvider } from "./context/CourseContext";
-import Layout from "./components/Layout";
-import CoursesPage from "./pages/CoursesPage";
-import CourseDetailPage from "./pages/CourseDetailPage";
-import EnrollmentsPage from "./pages/EnrollmentsPage";
+import HomePage from "./pages/Home/Home";
+import Layout from "./components/Layout/Layout";
+import CoursesPage from "./pages/CoursesPage/CoursesPage";
+import CourseDetailPage from "./pages/CourseDetailPage/CourseDetailPage";
+import EnrollmentsPage from "./pages/EnrollmentsPage/EnrollmentsPage";
+import { EnrollmentProvider } from "./context/EnrollmentContext";
 
 export default function App() {
     return (
-        <CourseProvider>
+        <EnrollmentProvider>
             <BrowserRouter>
                 <Routes>
                     <Route element={<Layout />}>
@@ -21,10 +21,10 @@ export default function App() {
                         <Route
                             path="/enrollments"
                             element={<EnrollmentsPage />}
-                            />
+                        />
                     </Route>
                 </Routes>
             </BrowserRouter>
-        </CourseProvider>
+        </EnrollmentProvider>
     );
 }
