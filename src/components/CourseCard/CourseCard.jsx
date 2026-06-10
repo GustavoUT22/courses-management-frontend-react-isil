@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./CourseCard.module.css";
 
-
 export default function CourseCard({course}){
-
     return(
         <div className={styles["course-card"]}>
             <span>{course.category}</span> 

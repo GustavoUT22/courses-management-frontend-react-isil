@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getCourseById } from "../../services/CourseService.jsx";
+import { useEnrollment } from "../../context/EnrollmentContext";
 import styles from "./CourseDetail.module.css";
 
 const CourseDetailPage = () => {
     const { id } = useParams();
     const [course, setCourse] = useState(null);
     const navigate = useNavigate();
+    const [enrollments, addEnrollment] = useEnrollment();
 
     useEffect(() => {
         getCourseById(id).then(setCourse);
     }, [id]);
+
     if (!course) return <div>Cargando...</div>;
+
+    const isEnrolled = enrollments.some((c) => c.id === course.id);
 
     return (
         <div className={styles["course-container"]}>
@@ -25,8 +30,7 @@ const CourseDetailPage = () => {
                 <h2>{course.name}</h2>
                 <p>{course.description}</p>
                 <p>
-                    <strong>Profesor: </strong>
-                    {course.teacher}
+                    <strong>Profesor:</strong> {course.teacher}
                 </p>
                 <p>
                     <strong>Categoría:</strong> {course.category}
@@ -34,6 +38,12 @@ const CourseDetailPage = () => {
                 <p>
                     <strong>Capacidad:</strong> {course.capacity}
                 </p>
+                <button
+                    onClick={() => addEnrollment(course)}
+                    disabled={isEnrolled}
+                >
+                    {isEnrolled ? "Ya inscrito" : "Preinscribirse"}
+                </button>
             </div>
         </div>
     );
