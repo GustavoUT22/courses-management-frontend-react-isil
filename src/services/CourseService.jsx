@@ -8,3 +8,11 @@ export function getCourses(){
         }, 500)
     });
 }
+
+export function getCourseById(id){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(courses.find((c) => c.id === Number(id)) ?? null);
+        }, 500);
+    });
+}
