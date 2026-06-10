@@ -14,7 +14,7 @@ Aplicación frontend para el sistema de Gestión de Cursos e Inscripciones, desa
 
 ### Enlace youtube
 
-> Agrega aquí el enlace al video de sustentación en YouTube.
+> https://youtu.be/mUH-MNLuiDs
 
 ## Imágenes de funcionamiento
 
