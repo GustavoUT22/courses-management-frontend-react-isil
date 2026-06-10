@@ -4,6 +4,7 @@ import { CourseProvider } from "./context/CourseContext";
 import Layout from "./components/Layout";
 import CoursesPage from "./pages/CoursesPage";
 import CourseDetailPage from "./pages/CourseDetailPage";
+import EnrollmentsPage from "./pages/EnrollmentsPage";
 
 export default function App() {
     return (
@@ -19,8 +20,8 @@ export default function App() {
                         />
                         <Route
                             path="/enrollments"
-                            element={<div>inscripciones page</div>}
-                        />
+                            element={<EnrollmentsPage />}
+                            />
                     </Route>
                 </Routes>
             </BrowserRouter>
