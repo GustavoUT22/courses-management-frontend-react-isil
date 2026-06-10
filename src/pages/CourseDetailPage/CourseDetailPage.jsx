@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { courses } from "../data/courses";
+import { getCourseById } from "../../services/CourseService.jsx";
 import styles from "./CourseDetail.module.css";
+
 const CourseDetailPage = () => {
     const { id } = useParams();
     const [course, setCourse] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
-        const found = courses.find((c) => c.id === Number(id));
-        setCourse(found);
+        getCourseById(id).then(setCourse);
     }, [id]);
     if (!course) return <div>Cargando...</div>;
 

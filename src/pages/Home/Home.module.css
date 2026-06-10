@@ -1,0 +1,32 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+}
+
+.home h1 {
+    font-size: 2rem;
+    color: #1a1a2e;
+}
+
+.home p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.home a {
+    display: inline-block;
+    background-color: #0a92b0;
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    width: fit-content;
+    transition: background-color 200ms;
+}
+
+.home a:hover {
+    background-color: #087a94;
+}
