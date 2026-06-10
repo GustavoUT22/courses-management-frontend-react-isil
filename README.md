@@ -2,6 +2,33 @@
 
 Aplicación frontend para el sistema de Gestión de Cursos e Inscripciones, desarrollada con React y React Router.
 
+### Integrantes
+
+| Nombre | Email |
+|--------|-------|
+| Gustavo Arturo Ugarte Torres  | 75399166@mail.isil.pe  |
+| Diego Alonso Josue García Díaz| 71158945@mail.isil.pe  |
+| Jaidy Julisa Rojas Ciriaco    | 77681482@mail.isil.pe  |
+| Aldair Casafranca             | 74908088@mail.isil.pe  |
+| Frank Anthony Espino Delerna  | 74176103@mail.isil.pe  |
+
+### Enlace youtube
+
+> Agrega aquí el enlace al video de sustentación en YouTube.
+
+## Imágenes de funcionamiento
+
+### 1- Inicio
+![Inicio](docs/pagina-inicio.png)
+
+### 2- Catálogo de cursos
+![Catálogo](docs/pagina-cursos.png)
+
+### 3- Detalle de curso
+![Detalle](docs/pagina-detalle-curso.png)
+
+### 4- Mis preinscripciones
+![Preinscripciones](docs/pagina-preinscripciones.png)
 
 ##  Cómo empezar (todos los integrantes)
 
@@ -115,13 +142,13 @@ src/
  
 ## Integrantes y ramas
 
-| Integrante | Issue | Rama |
-|---|---|---|
-| Integrante 1 (Gustavo) | Setup base | `main` |
-| Integrante 2 | Navbar y Layout | `feature/navbar-layout` |
-| Integrante 3 | Catálogo de cursos | `feature/courses-catalog` |
-| Integrante 4 | Detalle de curso | `feature/course-detail` |
-| Integrante 5 | Mis preinscripciones | `feature/enrollments-page` |
+| Integrante | Nombre | Email | Issue | Rama |
+|---|---|---|---|---|
+| Integrante 1 | Gustavo | gustavougartetorres@gmail.com | Setup base | `main` |
+| Integrante 2 |  |  | Navbar y Layout | `feature/navbar-layout` |
+| Integrante 3 |  |  | Catálogo de cursos | `feature/courses-catalog` |
+| Integrante 4 |  |  | Detalle de curso | `feature/course-detail` |
+| Integrante 5 |  |  | Mis preinscripciones | `feature/enrollments-page` |
 
 ---
 
@@ -144,6 +171,19 @@ src/
 ![Preinscripciones](docs/preinscripciones.png)
 
 
+
+## Capturas requeridas
+
+| Vista | Ruta | Captura |
+|---|---|---|
+| Home | `/` | ![Home]() |
+| Catálogo de cursos | `/courses` | ![Catálogo]() |
+| Detalle de curso | `/courses/:id` | ![Detalle]() |
+| Mis preinscripciones | `/enrollments` | ![Preinscripciones]() |
+
+> Reemplaza los enlaces vacíos con las capturas reales de la aplicación corriendo.
+
+---
 
 ## Entregables
 - [ ] Repositorio en GitHub con todas las ramas mergeadas a `main`
